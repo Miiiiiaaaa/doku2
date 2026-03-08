@@ -1,0 +1,279 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+#headicon {
+  position: fixed;
+  bottom: -30px;
+  left: 10px;
+  width: 30%;
+  height: auto;
+  z-index: 4;
+}
+
+#mp3player {
+  position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 50%;
+    height: auto;
+    z-index: 5;
+}
+
+#mp3screen {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 50%;
+  height: auto;
+  z-index: 5;
+}
+
+.imageviewer {
+  position: fixed;
+  top: 150px;
+  right: 150px;
+  width: 500px;
+  height: 290px;
+  background-color:#8cfff7;
+  z-index: 5;
+  border-radius: 4%;
+  transition: all 1s ease;
+}
+
+.imageholder:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+#mp3scroller {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 50%;
+  height: auto;
+  z-index: 5;
+}
+
+#mp3smiley {
+  position: fixed;
+  top: 657px;
+  right: 307px;
+  width: 9.1%;
+  height: auto;
+  z-index: 5;
+}
+
+#mp3smiley {
+  display: block;
+  transform-origin: center center;
+  will-change: transform;
+  animation: mp3spin 15s linear infinite;
+}
+
+@keyframes mp3spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #mp3smiley { animation: none; }
+}
+
+#homebtn {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  width: 8%;
+  height: 8%;
+  background-image:url(images/homebtn.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 8;
+  transition: all 1s ease;
+}
+
+#homebtn:hover {
+  transform: scale(1.1);
+}
+
+.menuindicator {
+  position: fixed;
+  top: 83px;
+  left: 830px;
+  font-family: Cascadia Mono;
+  font-size: 19px;
+  color: rgb(0, 0, 0);
+  z-index: 5;
+}
+
+
+
+.auge {
+  position: fixed;
+  width: 6%;
+  height: auto;
+  z-index: 6;
+  transition: all 1s ease;
+}
+
+.auge:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#augeL {
+  top: 400px;
+  left: 385px;
+  transition: all 1s ease;
+}
+
+.textcount {
+  position: fixed;
+  top: 420px;
+  left: 497px;
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  z-index: 7;
+}
+
+#augeR {
+  top: 430px;
+  left: 540px;
+}
+
+.sprechi1 {
+  position: fixed;
+  top: 6px;
+  left: -20px;
+  width: 53%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* adjust to match image */
+
+  background-image: url("images/sprechi1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+}
+
+.sprechi2 {
+  position: fixed;
+  top: 6px;
+  left: -20px;
+  width: 53%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* adjust to match image */
+
+  background-image: url("images/sprechi2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+}
+
+.sprechi3 {
+  position: fixed;
+  top: 6px;
+  left: -20px;
+  width: 53%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* adjust to match image */
+
+  background-image: url("images/sprechi3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+}
+
+.sprechi1,
+.sprechi2,
+.sprechi3 {
+  display:none;
+  padding: 6% 5% 5% 5%; /* INSIDE padding */
+  box-sizing: border-box;
+
+  z-index: 5;
+}
+
+.sprechi-active {
+  display: block;
+}
+
+#rahmen {
+  position: fixed;
+  background-image: url(images/rahmen.png) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+/* Fullscreen support for rahmen */
+#rahmen:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+#rahmen:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+#rahmen:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*#credits {
+  position: fixed;
+  right: 100px;
+  top: 15px;
+  font-family: Cascadia Mono;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  z-index: 5;
+}
+
+#imageicon1 {
+  position: fixed;
+  top: 130px;
+  right: 600px;
+  width: 60px;
+  height: 70px;
+  background-color:#8cfff7;
+  z-index: 5;
+}
